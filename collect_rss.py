@@ -15,7 +15,6 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 ARTICLES_FILE = OUTPUT_DIR / "articles_collectes.json"
 ERRORS_FILE = OUTPUT_DIR / "erreurs_rss.json"
 
-MAX_ARTICLES_PAR_MEDIA = 3
 
 def previous_week():
     """Retourne la période du lundi au dimanche précédents."""
