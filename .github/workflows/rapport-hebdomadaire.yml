@@ -26,6 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Collecter les articles RSS de la semaine
+        run: python collect_rss.py
+        
       - name: Générer le PDF et envoyer l’e-mail
         env:
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
