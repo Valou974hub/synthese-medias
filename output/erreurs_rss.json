@@ -1,0 +1,42 @@
+[
+  {
+    "media": "Le Figaro",
+    "url_rss": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
+    "error": "<unknown>:10:2: mismatched tag"
+  },
+  {
+    "media": "Les Échos",
+    "url_rss": "https://www.lesechos.fr/rss/rss_une.xml",
+    "error": "<unknown>:10:2: mismatched tag"
+  },
+  {
+    "media": "TF1 Info",
+    "url_rss": "https://www.tf1info.fr/feeds/rss/actualites.xml",
+    "error": "<unknown>:2:567: not well-formed (invalid token)"
+  },
+  {
+    "media": "RTL",
+    "url_rss": "https://www.rtl.fr/rss",
+    "error": "<unknown>:3:61: not well-formed (invalid token)"
+  },
+  {
+    "media": "Mediapart",
+    "url_rss": "https://www.mediapart.fr/journal/rss",
+    "error": "<unknown>:2:0: syntax error"
+  },
+  {
+    "media": "StreetPress",
+    "url_rss": "https://www.streetpress.com/rss",
+    "error": "<unknown>:2:0: syntax error"
+  },
+  {
+    "media": "Arrêt sur images",
+    "url_rss": "https://www.arretsurimages.net/feed",
+    "error": "<unknown>:17:2: undefined entity"
+  },
+  {
+    "media": "Le Média",
+    "url_rss": "https://www.lemediatv.fr/rss",
+    "error": "<unknown>:2:0: syntax error"
+  }
+]
