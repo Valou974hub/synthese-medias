@@ -15,6 +15,8 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 ARTICLES_FILE = OUTPUT_DIR / "articles_collectes.json"
 ERRORS_FILE = OUTPUT_DIR / "erreurs_rss.json"
 
+MAX_ARTICLES_PAR_MEDIA = 3
+
 
 def previous_week():
     """Retourne la période du lundi au dimanche précédents."""
@@ -95,7 +97,7 @@ def collect_source(source, start, end):
         if not title or not link:
             continue
 
-        articles.append(
+         articles.append(
             {
                 "media": source["media"],
                 "categorie": source["categorie"],
@@ -107,7 +109,12 @@ def collect_source(source, start, end):
             }
         )
 
-    return articles
+    articles.sort(
+        key=lambda item: (item["date"], item["title"]),
+        reverse=True,
+    )
+
+    return articles[:MAX_ARTICLES_PAR_MEDIA]
 
 
 def main():
