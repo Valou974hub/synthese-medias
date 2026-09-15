@@ -97,7 +97,7 @@ def collect_source(source, start, end):
         if not title or not link:
             continue
 
-         articles.append(
+        articles.append(
             {
                 "media": source["media"],
                 "categorie": source["categorie"],
@@ -115,8 +115,7 @@ def collect_source(source, start, end):
     )
 
     return articles[:MAX_ARTICLES_PAR_MEDIA]
-
-
+    
 def main():
     start, end = previous_week()
     sources = load_sources()
