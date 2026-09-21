@@ -134,7 +134,12 @@ def save_json(path: Path, payload: Any) -> None:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
 
 
-def collect_from_feed(media: dict[str, Any], feed_url: str, start: date, end: date) -> list[dict[str, Any]]:
+def collect_from_feed(
+    media: dict[str, Any],
+    feed_url: str,
+    start: date,
+    end: date,
+) -> list[dict[str, Any]]:
     """Collecte les entrées RSS/Atom du média appartenant à la période."""
     collected: list[dict[str, Any]] = []
 
@@ -184,7 +189,11 @@ def collect_from_feed(media: dict[str, Any], feed_url: str, start: date, end: da
     return collected
 
 
-def collect_media(media: dict[str, Any], start: date, end: date) -> tuple[list[dict[str, Any]], str]:
+def collect_media(
+    media: dict[str, Any],
+    start: date,
+    end: date,
+) -> tuple[list[dict[str, Any]], str]:
     """
     Retourne les contenus retenus et un statut de collecte.
 
@@ -192,15 +201,35 @@ def collect_media(media: dict[str, Any], start: date, end: date) -> tuple[list[d
     remplacés par des titres non vérifiés.
     """
     feeds = media.get("rss") or []
+
+    if isinstance(feeds, str):
+        feeds = [feeds]
+
+    if not isinstance(feeds, list):
+        print(
+            f"[WARN] Configuration RSS invalide pour {media['name']}.",
+            file=sys.stderr,
+        )
+        feeds = []
+
     all_entries: list[dict[str, Any]] = []
 
     for feed_url in feeds:
-        all_entries.extend(collect_from_feed(media, feed_url, start, end))
+        if not isinstance(feed_url, str) or not feed_url.strip():
+            continue
+
+        all_entries.extend(
+            collect_from_feed(media, feed_url.strip(), start, end)
+        )
 
     unique: dict[str, dict[str, Any]] = {}
     title_keys: set[str] = set()
 
-    for article in sorted(all_entries, key=lambda row: row["published_at"], reverse=True):
+    for article in sorted(
+        all_entries,
+        key=lambda row: row["published_at"],
+        reverse=True,
+    ):
         url = article["url"]
         title_key = normalise_title(article["title"])
 
@@ -210,7 +239,7 @@ def collect_media(media: dict[str, Any], start: date, end: date) -> tuple[list[d
         unique[url] = article
         title_keys.add(title_key)
 
-    selected = list(unique.values())[: int(media.get("max_items", 3))]
+    selected = list(unique.values())[:3]
 
     if selected:
         return selected, "found"
