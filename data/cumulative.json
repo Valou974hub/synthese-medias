@@ -1,0 +1,146 @@
+{
+  "media": {
+    "humanite": {
+      "name": "L’Humanité",
+      "category": "non_independent",
+      "orientation": "gauche / communiste",
+      "total_articles": 0,
+      "weeks_with_content": 0,
+      "last_seen": null,
+      "known_urls": []
+    },
+    "le_monde": {
+      "name": "Le Monde",
+      "category": "non_independent",
+      "orientation": "centre-gauche / libéral-progressiste",
+      "total_articles": 0,
+      "weeks_with_content": 0,
+      "last_seen": null,
+      "known_urls": []
+    },
+    "le_figaro": {
+      "name": "Le Figaro",
+      "category": "non_independent",
+      "orientation": "droite / libéral-conservateur",
+      "total_articles": 0,
+      "weeks_with_content": 0,
+      "last_seen": null,
+      "known_urls": []
+    },
+    "liberation": {
+      "name": "Libération",
+      "category": "non_independent",
+      "orientation": "gauche / centre-gauche",
+      "total_articles": 0,
+      "weeks_with_content": 0,
+      "last_seen": null,
+      "known_urls": []
+    },
+    "charlie_hebdo": {
+      "name": "Charlie Hebdo",
+      "category": "independent",
+      "orientation": "gauche libertaire / satirique",
+      "total_articles": 0,
+      "weeks_with_content": 0,
+      "last_seen": null,
+      "known_urls": []
+    },
+    "les_echos": {
+      "name": "Les Échos",
+      "category": "non_independent",
+      "orientation": "libéral / centre-droit",
+      "total_articles": 0,
+      "weeks_with_content": 0,
+      "last_seen": null,
+      "known_urls": []
+    },
+    "le_parisien": {
+      "name": "Le Parisien / Aujourd’hui en France",
+      "category": "non_independent",
+      "orientation": "centre /",
+      "total_articles": 0,
+      "weeks_with_content": 0,
+      "last_seen": null,
+      "known_urls": []
+    }
+  },
+  "history": [
+    {
+      "period_start": "2026-09-14",
+      "period_end": "2026-09-20",
+      "generated_at": "2026-09-21T21:34:17.542917+02:00",
+      "media": [
+        {
+          "slug": "humanite",
+          "name": "L’Humanité",
+          "category": "non_independent",
+          "orientation": "gauche / communiste",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "le_monde",
+          "name": "Le Monde",
+          "category": "non_independent",
+          "orientation": "centre-gauche / libéral-progressiste",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "not_found",
+          "total_articles": 0
+        },
+        {
+          "slug": "le_figaro",
+          "name": "Le Figaro",
+          "category": "non_independent",
+          "orientation": "droite / libéral-conservateur",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "not_found",
+          "total_articles": 0
+        },
+        {
+          "slug": "liberation",
+          "name": "Libération",
+          "category": "non_independent",
+          "orientation": "gauche / centre-gauche",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "not_found",
+          "total_articles": 0
+        },
+        {
+          "slug": "charlie_hebdo",
+          "name": "Charlie Hebdo",
+          "category": "independent",
+          "orientation": "gauche libertaire / satirique",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "les_echos",
+          "name": "Les Échos",
+          "category": "non_independent",
+          "orientation": "libéral / centre-droit",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "not_found",
+          "total_articles": 0
+        },
+        {
+          "slug": "le_parisien",
+          "name": "Le Parisien / Aujourd’hui en France",
+          "category": "non_independent",
+          "orientation": "centre /",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        }
+      ]
+    }
+  ]
+}

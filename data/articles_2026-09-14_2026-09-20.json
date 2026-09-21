@@ -1,0 +1,16 @@
+{
+  "period_start": "2026-09-14",
+  "period_end": "2026-09-20",
+  "generated_at": "2026-09-21T21:34:17.542527+02:00",
+  "timezone": "Europe/Paris",
+  "articles": [],
+  "media_statuses": {
+    "humanite": "archive_to_check",
+    "le_monde": "not_found",
+    "le_figaro": "not_found",
+    "liberation": "not_found",
+    "charlie_hebdo": "archive_to_check",
+    "les_echos": "not_found",
+    "le_parisien": "archive_to_check"
+  }
+}
