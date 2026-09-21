@@ -100,7 +100,7 @@ media:
     display_order: 120
     collection: "rss_or_archive"
     rss:
-      - "https://www.humanite.fr/backend.php"
+      - "https://www.humanite.fr/rss/actu.rss"
 
   - name: "Reporterre"
     slug: "reporterre"
@@ -242,8 +242,8 @@ media:
     orientation: "Gauche / centre-gauche, libéral-libertaire"
     display_order: 290
     collection: "rss_or_archive"
-    rss:
-      - "https://www.liberation.fr/arc/outboundfeeds/rss/"
+     rss:
+      - "https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml"
 
   - name: "L’Obs (Le Nouvel Observateur)"
     slug: "l-obs"
@@ -270,7 +270,7 @@ media:
     display_order: 330
     collection: "rss_or_archive"
     rss:
-      - "https://www.radiofrance.fr/franceinter/rss"
+      - "https://radiofrance-podcast.net/podcast09/rss_25474.xml"
 
   - name: "Le Monde"
     slug: "le-monde"
@@ -285,7 +285,7 @@ media:
     slug: "marianne"
     category: "non_independent"
     orientation: "Gauche souverainiste / anti-système"
-    display_order: 350
+    display_order: 360
     collection: "rss_or_archive"
     rss:
       - "https://www.marianne.net/rss.xml"
@@ -294,7 +294,7 @@ media:
     slug: "france-2-france-3"
     category: "non_independent"
     orientation: "Neutre / service public"
-    display_order: 360
+    display_order: 350
     collection: "rss_or_archive"
     rss:
       - "https://www.franceinfo.fr/titres.rss"
@@ -306,7 +306,7 @@ media:
     display_order: 370
     collection: "rss_or_archive"
     rss:
-      - "https://www.ouest-france.fr/rss/une"
+      - "https://www.ouest-france.fr/rss-en-continu.xml"
 
   - name: "Le Parisien / Aujourd’hui en France"
     slug: "le-parisien"
@@ -315,7 +315,7 @@ media:
     display_order: 380
     collection: "rss_or_archive"
     rss:
-      - "https://feeds.leparisien.fr/leparisien/rss"
+      - "https://feeds.leparisien.fr/leparisien/rss/actualites-en-continu"
 
   - name: "RTL"
     slug: "rtl"
@@ -333,7 +333,7 @@ media:
     display_order: 410
     collection: "rss_or_archive"
     rss:
-      - "https://www.tf1info.fr/rss.xml"
+      - "https://www.tf1info.fr/feeds/rss-une.xml"
 
   - name: "L’Express"
     slug: "lexpress"
@@ -342,7 +342,7 @@ media:
     display_order: 420
     collection: "rss_or_archive"
     rss:
-      - "https://www.lexpress.fr/arc/outboundfeeds/rss/"
+      - "https://www.lexpress.fr/arc/outboundfeeds/rss/alaune.xml"
 
   - name: "Europe 1"
     slug: "europe-1"
@@ -351,7 +351,7 @@ media:
     display_order: 430
     collection: "rss_or_archive"
     rss:
-      - "https://www.europe1.fr/rss.xml"
+      - "https://feeds.audiomeans.fr/feed/d46afe4c-2f13-4f73-9a6e-b36b2e37dcbf.xml"
 
   - name: "Les Échos"
     slug: "les-echos"
@@ -360,7 +360,7 @@ media:
     display_order: 440
     collection: "rss_or_archive"
     rss:
-      - "https://services.lesechos.fr/rss/les-echos-politique.xml"
+      - "https://services.lesechos.fr/rss/les-echos-economie.xml
 
   - name: "L’Opinion"
     slug: "l-opinion"
@@ -369,7 +369,7 @@ media:
     display_order: 450
     collection: "rss_or_archive"
     rss:
-      - "https://www.lopinion.fr/rss.xml"
+      - "https://www.lopinion.fr/index.rss"
 
   - name: "BFM TV"
     slug: "bfm-tv"
@@ -378,7 +378,7 @@ media:
     display_order: 460
     collection: "rss_or_archive"
     rss:
-      - "https://www.bfmtv.com/rss/news-24-7/"
+      - "https://www.bfmtv.com/rss/paris/"
 
   - name: "Le Figaro"
     slug: "le-figaro"
@@ -387,7 +387,7 @@ media:
     display_order: 470
     collection: "rss_or_archive"
     rss:
-      - "https://www.lefigaro.fr/rss/figaro_actualites.xml"
+      - "https://www.lefigaro.fr/rss/figaro_actualites-a-la-une.xml"
 
   - name: "CNews"
     slug: "cnews"
