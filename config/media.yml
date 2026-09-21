@@ -1,0 +1,82 @@
+report:
+  timezone: Europe/Paris
+  schedule: "Chaque lundi à 08:00, heure de Paris"
+  period: previous_monday_to_sunday
+  language: fr
+
+categories:
+  non_independent:
+    label: Médias non indépendants
+  independent:
+    label: Médias indépendants
+
+topics:
+  - économie et social
+  - politique et démocratie
+  - sécurité et justice pénale
+  - monde et Europe
+  - écologie
+  - numérique et IA
+  - culture et médias
+
+media:
+  - name: L’Humanité
+    slug: humanite
+    category: non_independent
+    orientation: gauche / communiste
+    collection: rss_or_archive
+    rss: []
+    archive_url: https://www.humanite.fr/
+    max_items: 3
+
+  - name: Le Monde
+    slug: le_monde
+    category: non_independent
+    orientation: centre-gauche / libéral-progressiste
+    collection: rss
+    rss:
+      - https://www.lemonde.fr/rss/tag/actualites.xml
+      - https://www.lemonde.fr/rss/une.xml
+    max_items: 3
+
+  - name: Le Figaro
+    slug: le_figaro
+    category: non_independent
+    orientation: droite / libéral-conservateur
+    collection: rss
+    rss:
+      - https://www.lefigaro.fr/rss/figaro_actualites.xml
+    max_items: 3
+
+  - name: Libération
+    slug: liberation
+    category: non_independent
+    orientation: gauche / centre-gauche
+    collection: rss
+    rss:
+      - https://www.liberation.fr/arc/outboundfeeds/rss-all/
+    max_items: 3
+
+  - name: Charlie Hebdo
+    slug: charlie_hebdo
+    category: independent
+    orientation: gauche libertaire / satirique
+    collection: archive
+    rss: []
+    archive_url: https://charliehebdo.fr/
+    max_items: 3
+
+  - name: Les Échos
+    slug: les_echos
+    category: non_independent
+    orientation: libéral / centre-droit
+    collection: rss
+    rss:
+      - https://www.lesechos.fr/rss/rss_france.xml
+      - https://www.lesechos.fr/rss/rss_economie.xml
+    max_items: 3
+
+  - name: Le Parisien / Aujourd’hui en France
+    slug: le_parisien
+    category: non_independent
+    orientation: centre /
