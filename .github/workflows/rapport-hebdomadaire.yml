@@ -1,45 +1,29 @@
-name: Synthèse hebdomadaire des médias
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 6 * * 1"
-
-permissions:
-  contents: write
-
-jobs:
-  generer-et-envoyer:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Récupérer le dépôt
-        uses: actions/checkout@v4
-
-      - name: Installer Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Installer les dépendances
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Collecter les articles RSS de la semaine
-        run: python collect_rss.py
-        
-      - name: Générer le PDF et envoyer l’e-mail
+      - name: Vérifier la configuration e-mail
+        if: steps.paris_time.outputs.run_report == 'true'
+        id: email_config
+        shell: bash
         env:
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-          SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
-        run: python generate_report.py
-
-      - name: Enregistrer le PDF dans le dépôt
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/
-          git diff --cached --quiet || git commit -m "Ajout du rapport hebdomadaire"
-          git push
+          if [ -n "$MAIL_USERNAME" ] && [ -n "$MAIL_PASSWORD" ] && [ -n "$MAIL_TO" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Configuration SMTP absente : le PDF sera disponible comme artefact, sans envoi par e-mail."
+          fi
+
+      - name: Envoyer le PDF par e-mail
+        if: steps.paris_time.outputs.run_report == 'true' && steps.email_config.outputs.enabled == 'true'
+        uses: dawidd6/action-send-mail@v6
+        with:
+          server_address: smtp.office365.com
+          server_port: 587
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Synthèse des médias — rapport hebdomadaire"
+          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.MAIL_USERNAME }}
+          body: "Le rapport PDF détaillé et le suivi cumulatif ont été générés automatiquement."
+          attachments: output/*.pdf
