@@ -263,6 +263,14 @@ media:
     rss:
       - "https://www.courrierinternational.com/feed/all/rss.xml"
       
+  - name: "AOC (Analyse Opinion Critique)"
+    slug: "aoc"
+    category: "independent"
+    orientation: "Centre-gauche intellectuel"
+    display_order: 320
+    collection: "archive"
+    rss: []    
+    
   - name: "France Inter"
     slug: "france-inter"
     category: "non_independent"
@@ -280,16 +288,7 @@ media:
     collection: "rss_or_archive"
     rss:
       - "https://www.lemonde.fr/rss/une.xml"
-
-  - name: "Marianne"
-    slug: "marianne"
-    category: "non_independent"
-    orientation: "Gauche souverainiste / anti-système"
-    display_order: 360
-    collection: "rss_or_archive"
-    rss:
-      - "https://www.marianne.net/rss.xml"
-
+      
   - name: "France 2 / France 3"
     slug: "france-2-france-3"
     category: "non_independent"
@@ -298,6 +297,15 @@ media:
     collection: "rss_or_archive"
     rss:
       - "https://www.franceinfo.fr/titres.rss"
+      
+  - name: "Marianne"
+    slug: "marianne"
+    category: "non_independent"
+    orientation: "Gauche souverainiste / anti-système"
+    display_order: 360
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.marianne.net/rss.xml"
 
   - name: "Ouest-France"
     slug: "ouest-france"
@@ -360,7 +368,7 @@ media:
     display_order: 440
     collection: "rss_or_archive"
     rss:
-      - "https://services.lesechos.fr/rss/les-echos-economie.xml
+      - "https://services.lesechos.fr/rss/les-echos-economie.xml"
 
   - name: "L’Opinion"
     slug: "l-opinion"
@@ -398,10 +406,4 @@ media:
     rss:
       - "https://www.cnews.fr/rss.xml"
 
-  - name: "AOC (Analyse Opinion Critique)"
-    slug: "aoc"
-    category: "independent"
-    orientation: "Centre-gauche intellectuel"
-    display_order: 320
-    collection: "archive"
-    rss: []
+
