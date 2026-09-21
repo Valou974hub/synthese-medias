@@ -171,15 +171,7 @@ STYLES.add(
 
 
 def paragraph(text: str, style: str = "BodyFrench") -> Paragraph:
-    """Protège les caractères utilisés dans le mini-HTML de ReportLab."""
-    replacements = {
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-    }
-    for old, new in replacements.items():
-        text = text.replace(old, new)
-
+    """Crée un paragraphe ReportLab en conservant le mini-HTML autorisé."""
     text = text.replace("\n", "<br/>")
     return Paragraph(text, STYLES[style])
 
