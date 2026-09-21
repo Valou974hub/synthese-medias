@@ -1,7 +1,7 @@
 {
   "period_start": "2026-09-14",
   "period_end": "2026-09-20",
-  "generated_at": "2026-09-21T23:38:33.828578+02:00",
+  "generated_at": "2026-09-22T00:04:00.754143+02:00",
   "timezone": "Europe/Paris",
   "articles": [
     {
@@ -72,6 +72,48 @@
       "summary": "Ultra-médiatisé, le procès de Lindsay Clancy, cette Américaine accusée de triple infanticide, a retenti jusqu’en France. Et si l’affaire a rouvert le débat sur la santé mentale des mères en post-partum, elle alimente aussi la guerre culturelle contre le camp progressiste.",
       "source_type": "rss",
       "feed_url": "https://api.arretsurimages.net/api/public/rss/all-content",
+      "topics": []
+    },
+    {
+      "media": "BFM TV",
+      "slug": "bfm-tv",
+      "category": "non_independent",
+      "orientation": "Centre-droit",
+      "title": "Un animateur périscolaire d'une école parisienne condamné à cinq ans de prison, dont un ferme, pour agressions sexuelles sur neuf enfants",
+      "url": "https://www.bfmtv.com/paris/un-animateur-periscolaire-d-une-ecole-parisienne-condamne-a-cinq-ans-de-prison-dont-un-ferme-pour-agressions-sexuelles-sur-neuf-enfants_AD-202609150491.html",
+      "published_at": "2026-09-15T14:04:33+02:00",
+      "published_date": "2026-09-15",
+      "summary": "Il s'agit de la première peine ferme prononcée par la justice depuis le début du scandale dans la capitale.",
+      "source_type": "rss",
+      "feed_url": "https://www.bfmtv.com/rss/paris/",
+      "topics": []
+    },
+    {
+      "media": "BFM TV",
+      "slug": "bfm-tv",
+      "category": "non_independent",
+      "orientation": "Centre-droit",
+      "title": "Emmanuel Grégoire, maire de Paris",
+      "url": "https://www.bfmtv.com/paris/emmanuel-gregoire-maire-de-paris_DN-202603250470.html",
+      "published_at": "2026-09-16T09:16:59+02:00",
+      "published_date": "2026-09-16",
+      "summary": "Emmanuel Grégoire a été élu maire de Paris en mars 2026 en battant Rachida Dati et Sophia Chikirou au second tour. Avant cette date, il a été le premier adjoint d'Anne Hidalgo et député de la 7e circonscription de Paris sous l'étiquette du Parti socialiste.",
+      "source_type": "rss",
+      "feed_url": "https://www.bfmtv.com/rss/paris/",
+      "topics": []
+    },
+    {
+      "media": "BFM TV",
+      "slug": "bfm-tv",
+      "category": "non_independent",
+      "orientation": "Centre-droit",
+      "title": "Un drapeau israélien retiré d'une installation à Paris après un acte de vandalisme, colère de l'ambassade",
+      "url": "https://www.bfmtv.com/paris/un-drapeau-israelien-retire-d-une-installation-a-paris-apres-un-acte-de-vandalisme-colere-de-l-ambassade_AD-202609160575.html",
+      "published_at": "2026-09-16T15:49:53+02:00",
+      "published_date": "2026-09-16",
+      "summary": "Un drapeau israélien intégré à une installation artistique à Paris a été vandalisé dans la nuit du 14 septembre. La \"décision collégiale\" de le retirer suscite la \"consternation\" de l'ambassade d'Israël en France.",
+      "source_type": "rss",
+      "feed_url": "https://www.bfmtv.com/rss/paris/",
       "topics": []
     },
     {
@@ -285,6 +327,48 @@
       "topics": []
     },
     {
+      "media": "Europe 1",
+      "slug": "europe-1",
+      "category": "non_independent",
+      "orientation": "Centre-droit",
+      "title": "Le journal de 22h00 du 20/09/2026",
+      "url": "https://podcasts.audiomeans.fr/le-journal-europe-1-b36b2e37dcbf/le-journal-de-22h00-du-20-09-2026-d3f5101ef95d",
+      "published_at": "2026-09-20T21:59:51+02:00",
+      "published_date": "2026-09-20",
+      "summary": "Hébergé par Audiomeans. Visitez audiomeans.fr/politique-de-confidentialite pour plus d'informations.",
+      "source_type": "rss",
+      "feed_url": "https://feeds.audiomeans.fr/feed/d46afe4c-2f13-4f73-9a6e-b36b2e37dcbf.xml",
+      "topics": []
+    },
+    {
+      "media": "Europe 1",
+      "slug": "europe-1",
+      "category": "non_independent",
+      "orientation": "Centre-droit",
+      "title": "Le journal de 22h30 du 20/09/2026",
+      "url": "https://podcasts.audiomeans.fr/le-journal-europe-1-b36b2e37dcbf/le-journal-de-22h30-du-20-09-2026-072ae3a54543",
+      "published_at": "2026-09-20T22:30:11+02:00",
+      "published_date": "2026-09-20",
+      "summary": "Hébergé par Audiomeans. Visitez audiomeans.fr/politique-de-confidentialite pour plus d'informations.",
+      "source_type": "rss",
+      "feed_url": "https://feeds.audiomeans.fr/feed/d46afe4c-2f13-4f73-9a6e-b36b2e37dcbf.xml",
+      "topics": []
+    },
+    {
+      "media": "Europe 1",
+      "slug": "europe-1",
+      "category": "non_independent",
+      "orientation": "Centre-droit",
+      "title": "Le journal de 23h00 du 20/09/2026",
+      "url": "https://podcasts.audiomeans.fr/le-journal-europe-1-b36b2e37dcbf/le-journal-de-23h00-du-20-09-2026-77bc736d576f",
+      "published_at": "2026-09-20T23:00:34+02:00",
+      "published_date": "2026-09-20",
+      "summary": "Hébergé par Audiomeans. Visitez audiomeans.fr/politique-de-confidentialite pour plus d'informations.",
+      "source_type": "rss",
+      "feed_url": "https://feeds.audiomeans.fr/feed/d46afe4c-2f13-4f73-9a6e-b36b2e37dcbf.xml",
+      "topics": []
+    },
+    {
       "media": "Frustration",
       "slug": "frustration",
       "category": "independent",
@@ -324,6 +408,48 @@
       "summary": "Pendant un an, Saint Luigi : comment répondre à la violence du capitalisme a suscité des discussions et des questionnements, notamment au cours des nombreux événements publics organisés pour sa promotion. 30 000 exemplaires ont été vendus, ce qui témoigne d’un appétit renouvelé pour la question historique du rapport de force au sein d’une lutte des classes. Mais concrètement, comment faire ? Cette question est revenue régulièrement dans les échanges avec les lecteurices de Saint Luigi. [...]",
       "source_type": "rss",
       "feed_url": "https://www.frustrationmagazine.fr/feed/",
+      "topics": []
+    },
+    {
+      "media": "L’Express",
+      "slug": "lexpress",
+      "category": "non_independent",
+      "orientation": "Centre / centre-droit",
+      "title": "Paolo Benanti, le \"Monsieur IA\" qui chuchote à l'oreille du pape Leon XIV",
+      "url": "https://www.lexpress.fr/monde/europe/paolo-benanti-le-monsieur-ia-qui-chuchote-a-loreille-du-pape-leon-xiv-CEQDDEXR5ZDK7A3HMIUF5E5SLU/",
+      "published_at": "2026-09-20T18:00:00+02:00",
+      "published_date": "2026-09-20",
+      "summary": "Souvent, ses conférences débutent par une histoire de fin du monde. Un Armageddon numérique, où des agents IA (pour intelligence artificielle), duplices et rebelles, trahissent leurs concepteurs. Ce 7 septembre, à l’Ecole normale supérieure*, Paolo Benanti raconte comment la licorne américaine Hugging Face a subi, en juillet, pour la première fois dans l'histoire, l'offensive d’une IA qui a réussi à échapper à la vigilance humaine. \"70 000 attaques simultanées, s’exclame-t-il. J’étais alors à Seattle, j’ai parlé avec les ingénieurs qui ont subi le piratage. Ils avaient ordonné à d’autres machines de contrer l’intrusion, mais celles-ci ont refusé, de peur que les hommes apprennent à reproduire l'attaque !\" Remous dans la salle, alors même que les inquiétudes sur les dangers potentiels de l’",
+      "source_type": "rss",
+      "feed_url": "https://www.lexpress.fr/arc/outboundfeeds/rss/alaune.xml",
+      "topics": []
+    },
+    {
+      "media": "L’Express",
+      "slug": "lexpress",
+      "category": "non_independent",
+      "orientation": "Centre / centre-droit",
+      "title": "En visite à Saint-Pierre-et-Miquelon, Emmanuel Macron renforce les liens de la France avec le Canada",
+      "url": "https://www.lexpress.fr/monde/europe/en-visite-a-saint-pierre-et-miquelon-emmanuel-macron-renforce-les-liens-de-la-france-avec-le-canada-RGFR5C4OYVA6LLCFHDDYVKAYL4/",
+      "published_at": "2026-09-20T19:33:31+02:00",
+      "published_date": "2026-09-20",
+      "summary": "Le président Emmanuel Macron est arrivé dimanche dans le territoire français de Saint-Pierre-et-Miquelon pour s'entretenir avec le Premier ministre canadien Mark Carney, quelques semaines après que le président Donald Trump eut publié une photo montrant les îles recouvertes du drapeau américain. La visite d'Emmanuel Macron dans cet archipel situé au large de la côte atlantique du Canada est la première effectuée par un président français depuis 2014 et intervient alors que le Canada cherche à resserrer ses liens avec l’Union européenne dans un contexte de guerre commerciale de plus en plus acrimonieuse avec les États-Unis. Saint-Pierre-et-Miquelon est le seul territoire français restant en Amérique du Nord, et les responsables français ont déclaré que le déplacement d'Emmanuel Macron souli",
+      "source_type": "rss",
+      "feed_url": "https://www.lexpress.fr/arc/outboundfeeds/rss/alaune.xml",
+      "topics": []
+    },
+    {
+      "media": "L’Express",
+      "slug": "lexpress",
+      "category": "non_independent",
+      "orientation": "Centre / centre-droit",
+      "title": "Allemagne : nouvelle percée de l'AfD, Friedrich Merz grand perdant des régionales",
+      "url": "https://www.lexpress.fr/monde/europe/allemagne-lafd-en-passe-de-lemporter-un-nouveau-revers-pour-friedrich-merz-OAM32HW4SRCHZNKENUJBFDGCM4/",
+      "published_at": "2026-09-20T20:16:57+02:00",
+      "published_date": "2026-09-20",
+      "summary": "La formation d'extrême droite Alternative pour l'Allemagne (AfD) est arrivée en tête des élections régionales dans le Land de Mecklenbourg-Poméranie Occidentale, dans le nord-est de l'Allemagne, selon les sondages à la sortie des urnes. Le chancelier allemand, Friedrich Merz , a reconnu que ce résultat était un \"désastre\" pour son parti, la CDU, créditée d'un peu plus de 5 % des voix. Il s'est toutefois engagé à poursuivre son programme de réformes. Les sondages à la sortie des urnes diffusés sur la chaîne de télévision publique ARD montrent que l'AfD est en passe de remporter 37 % des voix, devançant les sociaux-démocrates du SPD (35,5 %) et les conservateurs de la CDU (5,5 %), ces deux derniers partis formant ensemble la coalition au pouvoir au niveau fédéral. Le score de la CDU est tout",
+      "source_type": "rss",
+      "feed_url": "https://www.lexpress.fr/arc/outboundfeeds/rss/alaune.xml",
       "topics": []
     },
     {
@@ -369,6 +495,48 @@
       "topics": []
     },
     {
+      "media": "L’Opinion",
+      "slug": "l-opinion",
+      "category": "non_independent",
+      "orientation": "Libéral / europhile",
+      "title": "L'autodestruction de France Inter",
+      "url": "https://www.lopinion.fr/politique/lautodestruction-de-france-inter",
+      "published_at": "2026-09-20T18:00:00+02:00",
+      "published_date": "2026-09-20",
+      "summary": "Il devient limpide que, inspirée par la gauche radicale, France Inter pratique un pluralisme de pacotille, triant de son propre chef entre adversaires légitimes ou à excommunier, au nom de la lutte antifasciste",
+      "source_type": "rss",
+      "feed_url": "https://www.lopinion.fr/index.rss",
+      "topics": []
+    },
+    {
+      "media": "L’Opinion",
+      "slug": "l-opinion",
+      "category": "non_independent",
+      "orientation": "Libéral / europhile",
+      "title": "Allemagne : malgré de nouveaux revers électoraux, Merz persiste et signe sur les réformes",
+      "url": "https://www.lopinion.fr/international/allemagne-malgre-de-nouveaux-revers-electoraux-merz-persiste-et-signe-sur-les-reformes",
+      "published_at": "2026-09-20T19:08:23+02:00",
+      "published_date": "2026-09-20",
+      "summary": "La CDU a pris le bouillon en Mecklembourg-Poméranie-Occidentale et pourrait perdre la mairie de Berlin",
+      "source_type": "rss",
+      "feed_url": "https://www.lopinion.fr/index.rss",
+      "topics": []
+    },
+    {
+      "media": "L’Opinion",
+      "slug": "l-opinion",
+      "category": "non_independent",
+      "orientation": "Libéral / europhile",
+      "title": "Présidentielle : la campagne otage des crises",
+      "url": "https://www.lopinion.fr/politique/presidentielle-la-campagne-otage-des-crises",
+      "published_at": "2026-09-20T19:45:00+02:00",
+      "published_date": "2026-09-20",
+      "summary": "Hausse des prix des carburants, risques financiers et sociaux, menace russe, réchauffement climatique... Emmanuel Macron met en garde son successeur à venir dans un climat anxiogène",
+      "source_type": "rss",
+      "feed_url": "https://www.lopinion.fr/index.rss",
+      "topics": []
+    },
+    {
       "media": "Reporterre",
       "slug": "reporterre",
       "category": "independent",
@@ -409,6 +577,20 @@
       "source_type": "rss",
       "feed_url": "https://reporterre.net/spip.php?page=backend-simple",
       "topics": []
+    },
+    {
+      "media": "TF1",
+      "slug": "tf1",
+      "category": "non_independent",
+      "orientation": "Centre / grand public",
+      "title": "EN DIRECT - Ukraine : la cheffe de la diplomatie européenne exhorte à maintenir la politique de sanctions contre la Russie",
+      "url": "https://www.tf1info.fr/international/direct-guerre-ukraine-russie-moscou-visee-par-une-importante-attaque-de-drones-au-dernier-jour-des-legislatives-dimanche-20-septembre-2026-2465177.html",
+      "published_at": "2026-09-20T08:52:51+02:00",
+      "published_date": "2026-09-20",
+      "summary": "Le président ukrainien Volodymyr Zelensky doit rencontrer son homologue américain Donald Trump mardi, en marge de l'Assemblée générale de l'ONU à New York, a indiqué lundi à l'AFP une source proche du dossier. L'Union européenne n'est finalement pas parvenue à confirmer lundi soir un accord de principe pour lever ses sanctions contre deux oligarques russes, les discussions se poursuivront mardi matin. Suivez les dernières informations.",
+      "source_type": "rss",
+      "feed_url": "https://www.tf1info.fr/feeds/rss-une.xml",
+      "topics": []
     }
   ],
   "media_statuses": {
@@ -443,21 +625,21 @@
     "liberation": "archive_to_check",
     "l-obs": "found",
     "courrier-international": "archive_to_check",
+    "aoc": "archive_to_check",
     "france-inter": "archive_to_check",
     "le-monde": "archive_to_check",
-    "marianne": "archive_to_check",
     "france-2-france-3": "archive_to_check",
+    "marianne": "archive_to_check",
     "ouest-france": "archive_to_check",
     "le-parisien": "archive_to_check",
     "rtl": "archive_to_check",
-    "tf1": "archive_to_check",
-    "lexpress": "archive_to_check",
-    "europe-1": "archive_to_check",
+    "tf1": "found",
+    "lexpress": "found",
+    "europe-1": "found",
     "les-echos": "archive_to_check",
-    "l-opinion": "archive_to_check",
-    "bfm-tv": "archive_to_check",
+    "l-opinion": "found",
+    "bfm-tv": "found",
     "le-figaro": "archive_to_check",
-    "cnews": "found",
-    "aoc": "archive_to_check"
+    "cnews": "found"
   }
 }
