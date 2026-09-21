@@ -56,6 +56,14 @@ def load_media():
         return list(csv.DictReader(file))
 
 
+def display_order(item):
+    """Renvoie le rang gauche-droite ; place les médias non classés à la fin."""
+    try:
+        return int(item.get("display_order", 9999))
+    except (TypeError, ValueError):
+        return 9999
+
+
 def get_fonts():
     candidate_fonts = [
         (
@@ -169,9 +177,8 @@ def build_pdf(media, start, end):
     sorted_media = sorted(
         media,
         key=lambda row: (
-            -int(row["cumul_articles"]),
-            0 if row["article_cette_semaine"] == "Oui" else 1,
-            row["media"].lower(),
+            display_order(row),
+            row["media"].casefold(),
         ),
     )
 
