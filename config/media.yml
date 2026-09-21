@@ -266,4 +266,17 @@ media:
   - name: "L’Opinion"
     slug: "l-opinion"
     category: "non_independent"
-    orientation: "Libéral /
+    orientation: "Libéral / europhile"
+    rss: "https://www.lopinion.fr/rss.xml"
+
+  - name: "France 2 / France 3"
+    slug: "france-2-france-3"
+    category: "non_independent"
+    orientation: "Neutre / service public"
+    rss: ""
+
+  - name: "22-med"
+    slug: "22-med"
+    category: "independent"
+    orientation: "Pluriel / internationaliste"
+    rss: ""
