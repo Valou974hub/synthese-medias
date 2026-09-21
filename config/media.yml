@@ -100,7 +100,7 @@ media:
     display_order: 120
     collection: "rss_or_archive"
     rss:
-      - "https://www.humanite.fr/rss.xml"
+      - "https://www.humanite.fr/backend.php"
 
   - name: "Reporterre"
     slug: "reporterre"
@@ -225,8 +225,9 @@ media:
     orientation: "Gauche libertaire / contestataire"
     display_order: 270
     collection: "archive"
-    rss: []
-
+    rss:
+      - "https://charliehebdo.fr/feed/"
+      
   - name: "Le Canard enchaîné"
     slug: "le-canard-enchaine"
     category: "independent"
@@ -260,16 +261,8 @@ media:
     display_order: 310
     collection: "rss_or_archive"
     rss:
-      - "https://www.courrierinternational.com/rss"
-
-  - name: "AOC (Analyse Opinion Critique)"
-    slug: "aoc"
-    category: "independent"
-    orientation: "Centre-gauche intellectuel"
-    display_order: 320
-    collection: "archive"
-    rss: []
-
+      - "https://www.courrierinternational.com/feed/all/rss.xml"
+      
   - name: "France Inter"
     slug: "france-inter"
     category: "non_independent"
@@ -292,7 +285,7 @@ media:
     slug: "marianne"
     category: "non_independent"
     orientation: "Gauche souverainiste / anti-système"
-    display_order: 360
+    display_order: 350
     collection: "rss_or_archive"
     rss:
       - "https://www.marianne.net/rss.xml"
@@ -301,9 +294,10 @@ media:
     slug: "france-2-france-3"
     category: "non_independent"
     orientation: "Neutre / service public"
-    display_order: 350
-    collection: "archive"
-    rss: []
+    display_order: 360
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.franceinfo.fr/titres.rss"
 
   - name: "Ouest-France"
     slug: "ouest-france"
@@ -312,7 +306,7 @@ media:
     display_order: 370
     collection: "rss_or_archive"
     rss:
-      - "https://www.ouest-france.fr/rss/"
+      - "https://www.ouest-france.fr/rss/une"
 
   - name: "Le Parisien / Aujourd’hui en France"
     slug: "le-parisien"
@@ -321,7 +315,7 @@ media:
     display_order: 380
     collection: "rss_or_archive"
     rss:
-      - "https://www.leparisien.fr/rss.xml"
+      - "https://feeds.leparisien.fr/leparisien/rss"
 
   - name: "RTL"
     slug: "rtl"
@@ -330,7 +324,7 @@ media:
     display_order: 390
     collection: "rss_or_archive"
     rss:
-      - "https://www.rtl.fr/rss"
+      - "https://rss.rtl.fr/une.xml"
 
   - name: "TF1"
     slug: "tf1"
@@ -348,7 +342,7 @@ media:
     display_order: 420
     collection: "rss_or_archive"
     rss:
-      - "https://www.lexpress.fr/rss/"
+      - "https://www.lexpress.fr/arc/outboundfeeds/rss/"
 
   - name: "Europe 1"
     slug: "europe-1"
@@ -366,7 +360,150 @@ media:
     display_order: 440
     collection: "rss_or_archive"
     rss:
-      - "https://lesechos.fr/rss"
+      - "https://services.lesechos.fr/rss/les-echos-politique.xml"
+
+  - name: "L’Opinion"
+    slug: "l-opinion"
+    category: "non_independent"
+    orientation: "Libéral / europhile"
+    display_order: 450
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.lopinion.fr/rss.xml"
+
+  - name: "BFM TV"
+    slug: "bfm-tv"
+    category: "non_independent"
+    orientation: "Centre-droit"
+    display_order: 460
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.bfmtv.com/rss/news-24-7/"
+
+  - name: "Le Figaro"
+    slug: "le-figaro"
+    category: "non_independent"
+    orientation: "Droite / centre-droit, libéral-conservateur"
+    display_order: 470
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.lefigaro.fr/rss/figaro_actualites.xml"
+
+  - name: "CNews"
+    slug: "cnews"
+    category: "non_independent"
+    orientation: "Droite / extrême droite"
+    display_order: 480
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.cnews.fr/rss.xml"
+
+  - name: "AOC (Analyse Opinion Critique)"
+    slug: "aoc"
+    category: "independent"
+    orientation: "Centre-gauche intellectuel"
+    display_order: 320
+    collection: "archive"
+    rss: []
+
+    - name: "France Inter"
+    slug: "france-inter"
+    category: "non_independent"
+    orientation: "Centre-gauche"
+    display_order: 330
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.radiofrance.fr/franceinter/rss"
+
+  - name: "Le Monde"
+    slug: "le-monde"
+    category: "non_independent"
+    orientation: "Centre-gauche / libéral-progressiste"
+    display_order: 340
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.lemonde.fr/rss/une.xml"
+
+  - name: "Marianne"
+    slug: "marianne"
+    category: "non_independent"
+    orientation: "Gauche souverainiste / anti-système"
+    display_order: 350
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.marianne.net/rss.xml"
+
+  - name: "France 2 / France 3"
+    slug: "france-2-france-3"
+    category: "non_independent"
+    orientation: "Neutre / service public"
+    display_order: 360
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.franceinfo.fr/titres.rss"
+
+  - name: "Ouest-France"
+    slug: "ouest-france"
+    category: "non_independent"
+    orientation: "Centre / pro-européen, libéral"
+    display_order: 370
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.ouest-france.fr/rss/une"
+
+  - name: "Le Parisien / Aujourd’hui en France"
+    slug: "le-parisien"
+    category: "non_independent"
+    orientation: "Centre / modéré"
+    display_order: 380
+    collection: "rss_or_archive"
+    rss:
+      - "https://feeds.leparisien.fr/leparisien/rss"
+
+  - name: "RTL"
+    slug: "rtl"
+    category: "non_independent"
+    orientation: "Centre / populaire"
+    display_order: 390
+    collection: "rss_or_archive"
+    rss:
+      - "https://rss.rtl.fr/une.xml"
+
+  - name: "TF1"
+    slug: "tf1"
+    category: "non_independent"
+    orientation: "Centre / grand public"
+    display_order: 410
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.tf1info.fr/rss.xml"
+
+  - name: "L’Express"
+    slug: "lexpress"
+    category: "non_independent"
+    orientation: "Centre / centre-droit"
+    display_order: 420
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.lexpress.fr/arc/outboundfeeds/rss/"
+
+  - name: "Europe 1"
+    slug: "europe-1"
+    category: "non_independent"
+    orientation: "Centre-droit"
+    display_order: 430
+    collection: "rss_or_archive"
+    rss:
+      - "https://www.europe1.fr/rss.xml"
+
+  - name: "Les Échos"
+    slug: "les-echos"
+    category: "non_independent"
+    orientation: "Droite / libéral"
+    display_order: 440
+    collection: "rss_or_archive"
+    rss:
+      - "https://services.lesechos.fr/rss/les-echos-politique.xml"
 
   - name: "L’Opinion"
     slug: "l-opinion"
