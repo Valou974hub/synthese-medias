@@ -292,7 +292,7 @@ media:
     slug: "marianne"
     category: "non_independent"
     orientation: "Gauche souverainiste / anti-système"
-    display_order: 350
+    display_order: 360
     collection: "rss_or_archive"
     rss:
       - "https://www.marianne.net/rss.xml"
@@ -301,7 +301,7 @@ media:
     slug: "france-2-france-3"
     category: "non_independent"
     orientation: "Neutre / service public"
-    display_order: 360
+    display_order: 350
     collection: "archive"
     rss: []
 
