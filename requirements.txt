@@ -1,4 +1,4 @@
-reportlab==4.2.2
-feedparser==6.0.11
-requests==2.32.3
-python-dateutil==2.9.0.post0
+feedparser>=6.0.11
+PyYAML>=6.0.2
+python-dateutil>=2.9.0.post0
+reportlab>=4.2.2
