@@ -1,29 +1,127 @@
-      - name: Vérifier la configuration e-mail
-        if: steps.paris_time.outputs.run_report == 'true'
-        id: email_config
+name: Rapport hebdomadaire des médias
+
+on:
+  # GitHub Actions planifie uniquement en UTC.
+  # 06:00 UTC correspond à 08:00 Paris pendant l'heure d'été (CEST).
+  # 07:00 UTC correspond à 08:00 Paris pendant l'heure d'hiver (CET).
+  schedule:
+    - cron: "0 6 * * 1"
+    - cron: "0 7 * * 1"
+
+  # Autorise un lancement manuel depuis l'onglet Actions.
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "Début de période au format YYYY-MM-DD (facultatif)"
+        required: false
+        type: string
+      end_date:
+        description: "Fin de période au format YYYY-MM-DD (facultatif)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rapport-hebdomadaire-medias
+  cancel-in-progress: false
+
+jobs:
+  generate-report:
+    name: Collecter et générer le rapport
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Vérifier l'horaire Europe/Paris
+        id: paris_time
         shell: bash
-        env:
-          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
-          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
         run: |
-          if [ -n "$MAIL_USERNAME" ] && [ -n "$MAIL_PASSWORD" ] && [ -n "$MAIL_TO" ]; then
-            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          paris_hour="$(TZ=Europe/Paris date +%H)"
+          paris_day="$(TZ=Europe/Paris date +%u)"
+
+          echo "Heure locale Paris : $(TZ=Europe/Paris date '+%Y-%m-%d %H:%M %Z')"
+
+          if [ "${{ github.event_name }}" = "schedule" ] && { [ "$paris_day" != "1" ] || [ "$paris_hour" != "08" ]; }; then
+            echo "run_report=false" >> "$GITHUB_OUTPUT"
+            echo "Cette exécution UTC ne correspond pas au lundi 08:00, heure de Paris."
           else
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "Configuration SMTP absente : le PDF sera disponible comme artefact, sans envoi par e-mail."
+            echo "run_report=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Envoyer le PDF par e-mail
-        if: steps.paris_time.outputs.run_report == 'true' && steps.email_config.outputs.enabled == 'true'
-        uses: dawidd6/action-send-mail@v6
+      - name: Installer Python
+        if: steps.paris_time.outputs.run_report == 'true'
+        uses: actions/setup-python@v5
         with:
-          server_address: smtp.office365.com
-          server_port: 587
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "Synthèse des médias — rapport hebdomadaire"
-          to: ${{ secrets.MAIL_TO }}
-          from: ${{ secrets.MAIL_USERNAME }}
-          body: "Le rapport PDF détaillé et le suivi cumulatif ont été générés automatiquement."
-          attachments: output/*.pdf
+          python-version: "3.12"
+          cache: pip
+
+      - name: Installer les dépendances
+        if: steps.paris_time.outputs.run_report == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Déterminer les arguments de période
+        if: steps.paris_time.outputs.run_report == 'true'
+        id: period
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && \
+             [ -n "${{ inputs.start_date }}" ] && \
+             [ -n "${{ inputs.end_date }}" ]; then
+            echo "collector_args=--start ${{ inputs.start_date }} --end ${{ inputs.end_date }}" >> "$GITHUB_OUTPUT"
+            echo "report_args=--start ${{ inputs.start_date }} --end ${{ inputs.end_date }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "collector_args=" >> "$GITHUB_OUTPUT"
+            echo "report_args=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Collecter les articles de la semaine
+        if: steps.paris_time.outputs.run_report == 'true'
+        run: python collect_rss.py ${{ steps.period.outputs.collector_args }}
+
+      - name: Générer le PDF détaillé
+        if: steps.paris_time.outputs.run_report == 'true'
+        run: python generate_report.py ${{ steps.period.outputs.report_args }}
+
+      - name: Vérifier les fichiers générés
+        if: steps.paris_time.outputs.run_report == 'true'
+        shell: bash
+        run: |
+          test -n "$(find output -maxdepth 1 -type f -name '*.pdf' -print -quit)"
+          test -n "$(find data -maxdepth 1 -type f -name 'articles_*.json' -print -quit)"
+          test -f data/cumulative.json
+
+      - name: Publier le rapport comme artefact
+        if: steps.paris_time.outputs.run_report == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthese-medias-${{ github.run_number }}
+          path: |
+            output/*.pdf
+            data/articles_*.json
+            data/cumulative.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Enregistrer le suivi cumulatif dans le dépôt
+        if: steps.paris_time.outputs.run_report == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/cumulative.json data/articles_*.json
+
+          if git diff --cached --quiet; then
+            echo "Aucune donnée nouvelle à enregistrer."
+          else
+            git commit -m "Mettre à jour la synthèse médias hebdomadaire"
+            git push
+          fi
