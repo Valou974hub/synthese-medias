@@ -1,7 +1,7 @@
 {
   "period_start": "2026-09-14",
   "period_end": "2026-09-20",
-  "generated_at": "2026-09-21T23:14:30.481246+02:00",
+  "generated_at": "2026-09-21T23:38:33.828578+02:00",
   "timezone": "Europe/Paris",
   "articles": [
     {
@@ -201,6 +201,48 @@
       "topics": []
     },
     {
+      "media": "Charlie Hebdo",
+      "slug": "charlie-hebdo",
+      "category": "non_independent",
+      "orientation": "Gauche libertaire / contestataire",
+      "title": "La Papesse Céline à Paris : « Charlie » a rencontré ses adeptes",
+      "url": "https://charliehebdo.fr/2026/09/culture/la-papesse-celine-a-paris-charlie-a-rencontre-ses-adeptes/",
+      "published_at": "2026-09-16T08:38:18+02:00",
+      "published_date": "2026-09-16",
+      "summary": "",
+      "source_type": "rss",
+      "feed_url": "https://charliehebdo.fr/feed/",
+      "topics": []
+    },
+    {
+      "media": "Charlie Hebdo",
+      "slug": "charlie-hebdo",
+      "category": "non_independent",
+      "orientation": "Gauche libertaire / contestataire",
+      "title": "Du ZEvent à Sardoche, quand les streamers français se rêvent en politicards comme les autres",
+      "url": "https://charliehebdo.fr/2026/09/societe/tech/du-zevent-a-sardoche-quand-les-streamers-francais-se-revent-en-politicards-comme-les-autres/",
+      "published_at": "2026-09-17T17:03:21+02:00",
+      "published_date": "2026-09-17",
+      "summary": "Longtemps, le monde des streamers français a fonctionné comme une gigantesque cour de récréation. On enchaîne les parties en ligne, on lève des millions pour la bonne cause et on se contrefiche royalement des opinions politiques de son voisin de palier. En juin 2020, les streamers de jeu vidéo Kameto et Sardoche, des pontes du […]",
+      "source_type": "rss",
+      "feed_url": "https://charliehebdo.fr/feed/",
+      "topics": []
+    },
+    {
+      "media": "Charlie Hebdo",
+      "slug": "charlie-hebdo",
+      "category": "non_independent",
+      "orientation": "Gauche libertaire / contestataire",
+      "title": "Assassinat de Dominique Bernard (3/3). Mohammed Mogouchkov, du chef de famille tyrannique au terrorisme",
+      "url": "https://charliehebdo.fr/2026/09/societe/terrorisme/assassinat-de-dominique-bernard-3-3-mohammed-mogouchkov-du-chef-de-famille-tyrannique-au-terrorisme/",
+      "published_at": "2026-09-18T16:05:15+02:00",
+      "published_date": "2026-09-18",
+      "summary": "Le 13 octobre 2023, Mohammed Mogouchkov, vingt ans, attaque au couteau la cité scolaire Gambetta-Carnot, à Arras. Il tue Dominique Bernard, professeur de français, et blesse trois hommes venus s’interposer. Interpellé dans la cour de l’établissement, l’ancien élève reconnaîtra devant les enquêteurs avoir choisi intentionnellement le jour, le lieu, les armes et la cible. « […]",
+      "source_type": "rss",
+      "feed_url": "https://charliehebdo.fr/feed/",
+      "topics": []
+    },
+    {
       "media": "Contretemps",
       "slug": "contretemps",
       "category": "independent",
@@ -396,12 +438,11 @@
     "22-med": "archive_to_check",
     "jef-klak": "archive_to_check",
     "l-insatiable": "archive_to_check",
-    "charlie-hebdo": "archive_to_check",
+    "charlie-hebdo": "found",
     "le-canard-enchaine": "archive_to_check",
     "liberation": "archive_to_check",
     "l-obs": "found",
     "courrier-international": "archive_to_check",
-    "aoc": "archive_to_check",
     "france-inter": "archive_to_check",
     "le-monde": "archive_to_check",
     "marianne": "archive_to_check",
@@ -416,6 +457,7 @@
     "l-opinion": "archive_to_check",
     "bfm-tv": "archive_to_check",
     "le-figaro": "archive_to_check",
-    "cnews": "found"
+    "cnews": "found",
+    "aoc": "archive_to_check"
   }
 }

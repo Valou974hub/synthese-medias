@@ -406,10 +406,14 @@
       "name": "Charlie Hebdo",
       "category": "non_independent",
       "orientation": "Gauche libertaire / contestataire",
-      "total_articles": 0,
-      "weeks_with_content": 0,
-      "last_seen": null,
-      "known_urls": []
+      "total_articles": 3,
+      "weeks_with_content": 1,
+      "last_seen": "2026-09-18",
+      "known_urls": [
+        "https://charliehebdo.fr/2026/09/culture/la-papesse-celine-a-paris-charlie-a-rencontre-ses-adeptes/",
+        "https://charliehebdo.fr/2026/09/societe/tech/du-zevent-a-sardoche-quand-les-streamers-francais-se-revent-en-politicards-comme-les-autres/",
+        "https://charliehebdo.fr/2026/09/societe/terrorisme/assassinat-de-dominique-bernard-3-3-mohammed-mogouchkov-du-chef-de-famille-tyrannique-au-terrorisme/"
+      ]
     },
     "fakir": {
       "name": "Fakir",
@@ -4404,6 +4408,483 @@
           "has_article_this_week": true,
           "status": "found",
           "total_articles": 3
+        }
+      ]
+    },
+    {
+      "period_start": "2026-09-14",
+      "period_end": "2026-09-20",
+      "generated_at": "2026-09-21T23:38:33.830594+02:00",
+      "media": [
+        {
+          "slug": "contretemps",
+          "name": "Contretemps",
+          "category": "independent",
+          "orientation": "Gauche révolutionnaire / communiste anti-stalinienne",
+          "article_count": 3,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 3
+        },
+        {
+          "slug": "dialectik-football",
+          "name": "Dialectik Football",
+          "category": "independent",
+          "orientation": "Gauche anticapitaliste / autonomiste",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "acrimed",
+          "name": "Acrimed",
+          "category": "independent",
+          "orientation": "Gauche radicale / anticapitaliste",
+          "article_count": 2,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 2
+        },
+        {
+          "slug": "cqfd",
+          "name": "CQFD",
+          "category": "independent",
+          "orientation": "Gauche radicale / libertaire",
+          "article_count": 3,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 3
+        },
+        {
+          "slug": "ballast",
+          "name": "Ballast",
+          "category": "independent",
+          "orientation": "Gauche radicale / libertaire",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "au-poste",
+          "name": "Au Poste",
+          "category": "independent",
+          "orientation": "Gauche de gauche, anticapitaliste",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "l-envolee",
+          "name": "L’Envolée",
+          "category": "independent",
+          "orientation": "Gauche critique du système carcéral",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "histoires-crepues",
+          "name": "Histoires Crépues",
+          "category": "independent",
+          "orientation": "Gauche antiraciste / décoloniale",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "komune",
+          "name": "Komune",
+          "category": "independent",
+          "orientation": "Gauche antiraciste / décoloniale",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "basta",
+          "name": "Basta !",
+          "category": "independent",
+          "orientation": "Gauche écologiste / anticapitaliste",
+          "article_count": 3,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 3
+        },
+        {
+          "slug": "fakir",
+          "name": "Fakir",
+          "category": "independent",
+          "orientation": "Gauche populaire / altermondialiste",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "l-humanite",
+          "name": "L’Humanité",
+          "category": "non_independent",
+          "orientation": "Gauche / communiste (progressiste)",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "reporterre",
+          "name": "Reporterre",
+          "category": "independent",
+          "orientation": "Écologiste / gauche",
+          "article_count": 3,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 3
+        },
+        {
+          "slug": "age-de-faire",
+          "name": "L’Âge de faire",
+          "category": "independent",
+          "orientation": "Écologie sociale / gauche",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "le-media",
+          "name": "Le Média",
+          "category": "independent",
+          "orientation": "Gauche / indépendant",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "blast",
+          "name": "Blast",
+          "category": "independent",
+          "orientation": "Gauche / indépendant",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "frustration",
+          "name": "Frustration",
+          "category": "independent",
+          "orientation": "Gauche intellectuelle",
+          "article_count": 3,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 3
+        },
+        {
+          "slug": "mediapart",
+          "name": "Mediapart",
+          "category": "independent",
+          "orientation": "Gauche critique / indépendant",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "disclose",
+          "name": "Disclose",
+          "category": "independent",
+          "orientation": "Gauche / investigation indépendante",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "streetpress",
+          "name": "StreetPress",
+          "category": "independent",
+          "orientation": "Gauche / alternatif",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "arret-sur-images",
+          "name": "Arrêt sur images",
+          "category": "independent",
+          "orientation": "Gauche critique des médias",
+          "article_count": 3,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 3
+        },
+        {
+          "slug": "camille-reporter",
+          "name": "Camille Reporter",
+          "category": "independent",
+          "orientation": "Gauche humaniste / indépendante",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "equal-times",
+          "name": "Equal Times",
+          "category": "independent",
+          "orientation": "Gauche internationale / syndicale",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "22-med",
+          "name": "22-med",
+          "category": "independent",
+          "orientation": "Pluriel / internationaliste",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "jef-klak",
+          "name": "jef klak",
+          "category": "independent",
+          "orientation": "Gauche culturelle / expérimentale",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "l-insatiable",
+          "name": "L’Insatiable !",
+          "category": "independent",
+          "orientation": "Gauche culturelle",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "charlie-hebdo",
+          "name": "Charlie Hebdo",
+          "category": "non_independent",
+          "orientation": "Gauche libertaire / contestataire",
+          "article_count": 3,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 3
+        },
+        {
+          "slug": "le-canard-enchaine",
+          "name": "Le Canard enchaîné",
+          "category": "independent",
+          "orientation": "Indépendant, sensibilité gauche",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "liberation",
+          "name": "Libération",
+          "category": "non_independent",
+          "orientation": "Gauche / centre-gauche, libéral-libertaire",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "l-obs",
+          "name": "L’Obs (Le Nouvel Observateur)",
+          "category": "non_independent",
+          "orientation": "Gauche / centre-gauche",
+          "article_count": 3,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 3
+        },
+        {
+          "slug": "courrier-international",
+          "name": "Courrier international",
+          "category": "non_independent",
+          "orientation": "Gauche / progressiste",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "france-inter",
+          "name": "France Inter",
+          "category": "non_independent",
+          "orientation": "Centre-gauche",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "le-monde",
+          "name": "Le Monde",
+          "category": "non_independent",
+          "orientation": "Centre-gauche / libéral-progressiste",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "marianne",
+          "name": "Marianne",
+          "category": "non_independent",
+          "orientation": "Gauche souverainiste / anti-système",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "france-2-france-3",
+          "name": "France 2 / France 3",
+          "category": "non_independent",
+          "orientation": "Neutre / service public",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "ouest-france",
+          "name": "Ouest-France",
+          "category": "non_independent",
+          "orientation": "Centre / pro-européen, libéral",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "le-parisien",
+          "name": "Le Parisien / Aujourd’hui en France",
+          "category": "non_independent",
+          "orientation": "Centre / modéré",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "rtl",
+          "name": "RTL",
+          "category": "non_independent",
+          "orientation": "Centre / populaire",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "tf1",
+          "name": "TF1",
+          "category": "non_independent",
+          "orientation": "Centre / grand public",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "lexpress",
+          "name": "L’Express",
+          "category": "non_independent",
+          "orientation": "Centre / centre-droit",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "europe-1",
+          "name": "Europe 1",
+          "category": "non_independent",
+          "orientation": "Centre-droit",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "les-echos",
+          "name": "Les Échos",
+          "category": "non_independent",
+          "orientation": "Droite / libéral",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "l-opinion",
+          "name": "L’Opinion",
+          "category": "non_independent",
+          "orientation": "Libéral / europhile",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "bfm-tv",
+          "name": "BFM TV",
+          "category": "non_independent",
+          "orientation": "Centre-droit",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "le-figaro",
+          "name": "Le Figaro",
+          "category": "non_independent",
+          "orientation": "Droite / centre-droit, libéral-conservateur",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
+        },
+        {
+          "slug": "cnews",
+          "name": "CNews",
+          "category": "non_independent",
+          "orientation": "Droite / extrême droite",
+          "article_count": 3,
+          "has_article_this_week": true,
+          "status": "found",
+          "total_articles": 3
+        },
+        {
+          "slug": "aoc",
+          "name": "AOC (Analyse Opinion Critique)",
+          "category": "independent",
+          "orientation": "Centre-gauche intellectuel",
+          "article_count": 0,
+          "has_article_this_week": false,
+          "status": "archive_to_check",
+          "total_articles": 0
         }
       ]
     }
