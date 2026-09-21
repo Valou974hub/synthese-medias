@@ -1,282 +1,329 @@
 media:
-  - name: "L’Âge de faire"
-    slug: "age-de-faire"
+  - name: "Contretemps"
+    slug: "contretemps"
     category: "independent"
-    orientation: "Écologie sociale / gauche"
-    rss: ""
-
-  - name: "Reporterre"
-    slug: "reporterre"
-    category: "independent"
-    orientation: "Écologiste / gauche"
-    rss: "https://reporterre.net/spip.php?page=backend-simple"
-
-  - name: "L’Express"
-    slug: "lexpress"
-    category: "non_independent"
-    orientation: "Centre / centre-droit"
-    rss: "https://www.lexpress.fr/rss/"
-
-  - name: "TF1"
-    slug: "tf1"
-    category: "non_independent"
-    orientation: "Centre / grand public"
-    rss: "https://www.tf1info.fr/rss.xml"
-
-  - name: "Le Parisien / Aujourd’hui en France"
-    slug: "le-parisien"
-    category: "non_independent"
-    orientation: "Centre / modéré"
-    rss: "https://www.leparisien.fr/rss.xml"
-
-  - name: "RTL"
-    slug: "rtl"
-    category: "non_independent"
-    orientation: "Centre / populaire"
-    rss: "https://www.rtl.fr/rss"
-
-  - name: "Ouest-France"
-    slug: "ouest-france"
-    category: "non_independent"
-    orientation: "Centre / pro-européen, libéral"
-    rss: "https://www.ouest-france.fr/rss/"
-
-  - name: "BFM TV"
-    slug: "bfm-tv"
-    category: "non_independent"
-    orientation: "Centre-droit"
-    rss: "https://www.bfmtv.com/rss/news-24-7/"
-
-  - name: "Europe 1"
-    slug: "europe-1"
-    category: "non_independent"
-    orientation: "Centre-droit"
-    rss: "https://www.europe1.fr/rss.xml"
-
-  - name: "France Inter"
-    slug: "france-inter"
-    category: "non_independent"
-    orientation: "Centre-gauche"
-    rss: "https://www.radiofrance.fr/franceinter/rss"
-
-  - name: "Le Monde"
-    slug: "le-monde"
-    category: "non_independent"
-    orientation: "Centre-gauche / libéral-progressiste"
-    rss: "https://www.lemonde.fr/actualite-en-continu/rss_full.xml"
-
-  - name: "AOC (Analyse Opinion Critique)"
-    slug: "aoc"
-    category: "independent"
-    orientation: "Centre-gauche intellectuel"
-    rss: ""
-
-  - name: "Le Figaro"
-    slug: "le-figaro"
-    category: "non_independent"
-    orientation: "Droite / centre-droit, libéral-conservateur"
-    rss: "https://www.lefigaro.fr/rss/figaro_actualites.xml"
-
-  - name: "CNews"
-    slug: "cnews"
-    category: "non_independent"
-    orientation: "Droite / extrême droite"
-    rss: "https://www.cnews.fr/rss.xml"
-
-  - name: "Les Échos"
-    slug: "les-echos"
-    category: "non_independent"
-    orientation: "Droite / libéral"
-    rss: "https://lesechos.fr/rss"
-
-  - name: "StreetPress"
-    slug: "streetpress"
-    category: "independent"
-    orientation: "Gauche / alternatif"
-    rss: ""
-
-  - name: "L’Obs (Le Nouvel Observateur)"
-    slug: "l-obs"
-    category: "non_independent"
-    orientation: "Gauche / centre-gauche"
-    rss: "https://www.nouvelobs.com/rss.xml"
-
-  - name: "Libération"
-    slug: "liberation"
-    category: "non_independent"
-    orientation: "Gauche / centre-gauche, libéral-libertaire"
-    rss: "https://www.liberation.fr/arc/outboundfeeds/rss/"
-
-  - name: "L’Humanité"
-    slug: "l-humanite"
-    category: "non_independent"
-    orientation: "Gauche / communiste (progressiste)"
-    rss: "https://www.humanite.fr/rss.xml"
-
-  - name: "Blast"
-    slug: "blast"
-    category: "independent"
-    orientation: "Gauche / indépendant"
-    rss: ""
-
-  - name: "Le Média"
-    slug: "le-media"
-    category: "independent"
-    orientation: "Gauche / indépendant"
-    rss: ""
-
-  - name: "Disclose"
-    slug: "disclose"
-    category: "independent"
-    orientation: "Gauche / investigation indépendante"
-    rss: ""
-
-  - name: "Courrier international"
-    slug: "courrier-international"
-    category: "non_independent"
-    orientation: "Gauche / progressiste"
-    rss: "https://www.courrierinternational.com/rss"
-
-  - name: "Basta !"
-    slug: "basta"
-    category: "independent"
-    orientation: "Gauche écologiste / anticapitaliste"
-    rss: "https://basta.media/spip.php?page=backend"
+    orientation: "Gauche révolutionnaire / communiste anti-stalinienne"
+    display_order: 10
+    rss: "https://www.contretemps.eu/feed/"
 
   - name: "Dialectik Football"
     slug: "dialectik-football"
     category: "independent"
     orientation: "Gauche anticapitaliste / autonomiste"
+    display_order: 20
+    rss: ""
+
+  - name: "Acrimed"
+    slug: "acrimed"
+    category: "independent"
+    orientation: "Gauche radicale / anticapitaliste"
+    display_order: 30
+    rss: "https://www.acrimed.org/spip.php?page=backend"
+
+  - name: "CQFD"
+    slug: "cqfd"
+    category: "independent"
+    orientation: "Gauche radicale / libertaire"
+    display_order: 40
+    rss: "https://cqfd-journal.org/spip.php?page=backend"
+
+  - name: "Ballast"
+    slug: "ballast"
+    category: "independent"
+    orientation: "Gauche radicale / libertaire"
+    display_order: 50
+    rss: "https://www.revue-ballast.fr/feed/"
+
+  - name: "Au Poste"
+    slug: "au-poste"
+    category: "independent"
+    orientation: "Gauche de gauche, anticapitaliste"
+    display_order: 60
+    rss: ""
+
+  - name: "L’Envolée"
+    slug: "l-envolee"
+    category: "independent"
+    orientation: "Gauche critique du système carcéral"
+    display_order: 70
     rss: ""
 
   - name: "Histoires Crépues"
     slug: "histoires-crepues"
     category: "independent"
     orientation: "Gauche antiraciste / décoloniale"
+    display_order: 80
     rss: ""
 
   - name: "Komune"
     slug: "komune"
     category: "independent"
     orientation: "Gauche antiraciste / décoloniale"
+    display_order: 90
     rss: ""
 
-  - name: "Mediapart"
-    slug: "mediapart"
+  - name: "Basta !"
+    slug: "basta"
     category: "independent"
-    orientation: "Gauche critique / indépendant"
-    rss: "https://www.mediapart.fr/articles/feed"
+    orientation: "Gauche écologiste / anticapitaliste"
+    display_order: 100
+    rss: "https://basta.media/spip.php?page=backend"
 
-  - name: "Arrêt sur images"
-    slug: "arret-sur-images"
+  - name: "Fakir"
+    slug: "fakir"
     category: "independent"
-    orientation: "Gauche critique des médias"
-    rss: "https://www.arretsurimages.net/rss"
+    orientation: "Gauche populaire / altermondialiste"
+    display_order: 110
+    rss: "https://fakirpresse.info/spip.php?page=backend"
 
-  - name: "L’Envolée"
-    slug: "l-envolee"
+  - name: "L’Humanité"
+    slug: "l-humanite"
+    category: "non_independent"
+    orientation: "Gauche / communiste (progressiste)"
+    display_order: 120
+    rss: "https://www.humanite.fr/rss.xml"
+
+  - name: "Reporterre"
+    slug: "reporterre"
     category: "independent"
-    orientation: "Gauche critique du système carcéral"
+    orientation: "Écologiste / gauche"
+    display_order: 130
+    rss: "https://reporterre.net/spip.php?page=backend-simple"
+
+  - name: "L’Âge de faire"
+    slug: "age-de-faire"
+    category: "independent"
+    orientation: "Écologie sociale / gauche"
+    display_order: 140
     rss: ""
 
-  - name: "L’Insatiable !"
-    slug: "l-insatiable"
+  - name: "Le Média"
+    slug: "le-media"
     category: "independent"
-    orientation: "Gauche culturelle"
+    orientation: "Gauche / indépendant"
+    display_order: 150
     rss: ""
 
-  - name: "jef klak"
-    slug: "jef-klak"
+  - name: "Blast"
+    slug: "blast"
     category: "independent"
-    orientation: "Gauche culturelle / expérimentale"
-    rss: ""
-
-  - name: "Au Poste"
-    slug: "au-poste"
-    category: "independent"
-    orientation: "Gauche de gauche, anticapitaliste"
-    rss: ""
-
-  - name: "Camille Reporter"
-    slug: "camille-reporter"
-    category: "independent"
-    orientation: "Gauche humaniste / indépendante"
+    orientation: "Gauche / indépendant"
+    display_order: 160
     rss: ""
 
   - name: "Frustration"
     slug: "frustration"
     category: "independent"
     orientation: "Gauche intellectuelle"
+    display_order: 170
     rss: "https://www.frustrationmagazine.fr/feed/"
+
+  - name: "Mediapart"
+    slug: "mediapart"
+    category: "independent"
+    orientation: "Gauche critique / indépendant"
+    display_order: 180
+    rss: "https://www.mediapart.fr/articles/feed"
+
+  - name: "Disclose"
+    slug: "disclose"
+    category: "independent"
+    orientation: "Gauche / investigation indépendante"
+    display_order: 190
+    rss: ""
+
+  - name: "StreetPress"
+    slug: "streetpress"
+    category: "independent"
+    orientation: "Gauche / alternatif"
+    display_order: 200
+    rss: ""
+
+  - name: "Arrêt sur images"
+    slug: "arret-sur-images"
+    category: "independent"
+    orientation: "Gauche critique des médias"
+    display_order: 210
+    rss: "https://www.arretsurimages.net/rss"
+
+  - name: "Camille Reporter"
+    slug: "camille-reporter"
+    category: "independent"
+    orientation: "Gauche humaniste / indépendante"
+    display_order: 220
+    rss: ""
 
   - name: "Equal Times"
     slug: "equal-times"
     category: "independent"
     orientation: "Gauche internationale / syndicale"
+    display_order: 230
     rss: "https://www.equaltimes.org/spip.php?page=backend"
-
-  - name: "Charlie Hebdo"
-    slug: "charlie-hebdo"
-    category: "non_independent"
-    orientation: "Gauche libertaire / contestataire"
-    rss: ""
-
-  - name: "Fakir"
-    slug: "fakir"
-    category: "independent"
-    orientation: "Gauche populaire / altermondialiste"
-    rss: "https://fakirpresse.info/spip.php?page=backend"
-
-  - name: "Contretemps"
-    slug: "contretemps"
-    category: "independent"
-    orientation: "Gauche révolutionnaire / communiste anti-stalinienne"
-    rss: "https://www.contretemps.eu/feed/"
-
-  - name: "Acrimed"
-    slug: "acrimed"
-    category: "independent"
-    orientation: "Gauche radicale / anticapitaliste"
-    rss: "https://www.acrimed.org/spip.php?page=backend"
-
-  - name: "Ballast"
-    slug: "ballast"
-    category: "independent"
-    orientation: "Gauche radicale / libertaire"
-    rss: "https://www.revue-ballast.fr/feed/"
-
-  - name: "CQFD"
-    slug: "cqfd"
-    category: "independent"
-    orientation: "Gauche radicale / libertaire"
-    rss: "https://cqfd-journal.org/spip.php?page=backend"
-
-  - name: "Marianne"
-    slug: "marianne"
-    category: "non_independent"
-    orientation: "Gauche souverainiste / anti-système"
-    rss: "https://www.marianne.net/rss.xml"
-
-  - name: "Le Canard enchaîné"
-    slug: "le-canard-enchaine"
-    category: "independent"
-    orientation: "Indépendant, sensibilité gauche"
-    rss: ""
-
-  - name: "L’Opinion"
-    slug: "l-opinion"
-    category: "non_independent"
-    orientation: "Libéral / europhile"
-    rss: "https://www.lopinion.fr/rss.xml"
-
-  - name: "France 2 / France 3"
-    slug: "france-2-france-3"
-    category: "non_independent"
-    orientation: "Neutre / service public"
-    rss: ""
 
   - name: "22-med"
     slug: "22-med"
     category: "independent"
     orientation: "Pluriel / internationaliste"
+    display_order: 240
     rss: ""
+
+  - name: "jef klak"
+    slug: "jef-klak"
+    category: "independent"
+    orientation: "Gauche culturelle / expérimentale"
+    display_order: 250
+    rss: ""
+
+  - name: "L’Insatiable !"
+    slug: "l-insatiable"
+    category: "independent"
+    orientation: "Gauche culturelle"
+    display_order: 260
+    rss: ""
+
+  - name: "Charlie Hebdo"
+    slug: "charlie-hebdo"
+    category: "non_independent"
+    orientation: "Gauche libertaire / contestataire"
+    display_order: 270
+    rss: ""
+
+  - name: "Le Canard enchaîné"
+    slug: "le-canard-enchaine"
+    category: "independent"
+    orientation: "Indépendant, sensibilité gauche"
+    display_order: 280
+    rss: ""
+
+  - name: "Libération"
+    slug: "liberation"
+    category: "non_independent"
+    orientation: "Gauche / centre-gauche, libéral-libertaire"
+    display_order: 290
+    rss: "https://www.liberation.fr/arc/outboundfeeds/rss/"
+
+  - name: "L’Obs (Le Nouvel Observateur)"
+    slug: "l-obs"
+    category: "non_independent"
+    orientation: "Gauche / centre-gauche"
+    display_order: 300
+    rss: "https://www.nouvelobs.com/rss.xml"
+
+  - name: "Courrier international"
+    slug: "courrier-international"
+    category: "non_independent"
+    orientation: "Gauche / progressiste"
+    display_order: 310
+    rss: "https://www.courrierinternational.com/rss"
+
+  - name: "AOC (Analyse Opinion Critique)"
+    slug: "aoc"
+    category: "independent"
+    orientation: "Centre-gauche intellectuel"
+    display_order: 320
+    rss: ""
+
+  - name: "France Inter"
+    slug: "france-inter"
+    category: "non_independent"
+    orientation: "Centre-gauche"
+    display_order: 330
+    rss: "https://www.radiofrance.fr/franceinter/rss"
+
+  - name: "Le Monde"
+    slug: "le-monde"
+    category: "non_independent"
+    orientation: "Centre-gauche / libéral-progressiste"
+    display_order: 340
+    rss: "https://www.lemonde.fr/actualite-en-continu/rss_full.xml"
+
+  - name: "Marianne"
+    slug: "marianne"
+    category: "non_independent"
+    orientation: "Gauche souverainiste / anti-système"
+    display_order: 350
+    rss: "https://www.marianne.net/rss.xml"
+
+  - name: "France 2 / France 3"
+    slug: "france-2-france-3"
+    category: "non_independent"
+    orientation: "Neutre / service public"
+    display_order: 360
+    rss: ""
+
+  - name: "Ouest-France"
+    slug: "ouest-france"
+    category: "non_independent"
+    orientation: "Centre / pro-européen, libéral"
+    display_order: 370
+    rss: "https://www.ouest-france.fr/rss/"
+
+  - name: "Le Parisien / Aujourd’hui en France"
+    slug: "le-parisien"
+    category: "non_independent"
+    orientation: "Centre / modéré"
+    display_order: 380
+    rss: "https://www.leparisien.fr/rss.xml"
+
+  - name: "RTL"
+    slug: "rtl"
+    category: "non_independent"
+    orientation: "Centre / populaire"
+    display_order: 390
+    rss: "https://www.rtl.fr/rss"
+
+  - name: "TF1"
+    slug: "tf1"
+    category: "non_independent"
+    orientation: "Centre / grand public"
+    display_order: 410
+    rss: "https://www.tf1info.fr/rss.xml"
+
+  - name: "L’Express"
+    slug: "lexpress"
+    category: "non_independent"
+    orientation: "Centre / centre-droit"
+    display_order: 420
+    rss: "https://www.lexpress.fr/rss/"
+
+  - name: "Europe 1"
+    slug: "europe-1"
+    category: "non_independent"
+    orientation: "Centre-droit"
+    display_order: 430
+    rss: "https://www.europe1.fr/rss.xml"
+
+  - name: "Les Échos"
+    slug: "les-echos"
+    category: "non_independent"
+    orientation: "Droite / libéral"
+    display_order: 440
+    rss: "https://lesechos.fr/rss"
+
+  - name: "L’Opinion"
+    slug: "l-opinion"
+    category: "non_independent"
+    orientation: "Libéral / europhile"
+    display_order: 450
+    rss: "https://www.lopinion.fr/rss.xml"
+
+  - name: "BFM TV"
+    slug: "bfm-tv"
+    category: "non_independent"
+    orientation: "Centre-droit"
+    display_order: 460
+    rss: "https://www.bfmtv.com/rss/news-24-7/"
+
+  - name: "Le Figaro"
+    slug: "le-figaro"
+    category: "non_independent"
+    orientation: "Droite / centre-droit, libéral-conservateur"
+    display_order: 470
+    rss: "https://www.lefigaro.fr/rss/figaro_actualites.xml"
+
+  - name: "CNews"
+    slug: "cnews"
+    category: "non_independent"
+    orientation: "Droite / extrême droite"
+    display_order: 480
+    rss: "https://www.cnews.fr/rss.xml"
