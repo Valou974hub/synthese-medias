@@ -42,6 +42,16 @@ GREEN = HexColor("#d9ecd3")
 RED = HexColor("#f1cccc")
 GREY = HexColor("#666666")
 
+DEFAULT_TOPICS = [
+    "économie et social",
+    "politique et démocratie",
+    "sécurité et justice pénale",
+    "monde et Europe",
+    "écologie",
+    "numérique et IA",
+    "culture et médias",
+]
+
 FONT_REGULAR_CANDIDATES = [
     Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
     Path("/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf"),
@@ -208,7 +218,10 @@ def resolve_period(args: argparse.Namespace) -> tuple[date, date, Path]:
         )
 
     path = candidates[-1]
-    match = re.search(r"articles_(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})\.json$", path.name)
+    match = re.search(
+        r"articles_(\d{4}-\d{2}-\d{2})_(\d{4}-\d{2}-\d{2})\.json$",
+        path.name,
+    )
     if not match:
         raise ValueError(f"Nom de fichier hebdomadaire inattendu : {path.name}")
 
@@ -250,6 +263,14 @@ def short_url(url: str) -> str:
         return url[:95]
 
 
+def media_display_order(media: dict[str, Any]) -> int:
+    """Renvoie le rang gauche-droite ; place les médias non classés à la fin."""
+    try:
+        return int(media.get("display_order", 9999))
+    except (TypeError, ValueError):
+        return 9999
+
+
 def article_cell(articles: list[dict[str, Any]], status: str) -> str:
     """Fabrique la cellule éditoriale d'un tableau de médias."""
     if not articles:
@@ -258,7 +279,10 @@ def article_cell(articles: list[dict[str, Any]], status: str) -> str:
             "replay_to_check": "Contenu audiovisuel à vérifier dans les replays ou archives.",
             "not_found": "Aucun contenu individuel accessible identifié dans la période.",
         }
-        return messages.get(status, "Aucun contenu individuel accessible identifié dans la période.")
+        return messages.get(
+            status,
+            "Aucun contenu individuel accessible identifié dans la période.",
+        )
 
     parts: list[str] = []
     for article in articles:
@@ -325,44 +349,109 @@ def orientation_group(media: dict[str, Any]) -> str:
     Les médias explicitement de gauche ou de service public sont dans le premier.
     """
     orientation = media.get("orientation", "").lower()
-    left_markers = ("gauche", "progressiste", "internationaliste", "service public", "communiste")
+    left_markers = (
+        "gauche",
+        "progressiste",
+        "internationaliste",
+        "service public",
+        "communiste",
+    )
     return "gauche" if any(marker in orientation for marker in left_markers) else "droite"
 
 
-def infer_topics(articles: list[dict[str, Any]], topics: list[str]) -> dict[str, list[dict[str, Any]]]:
-    """Classement simple et transparent par mots-clés, sans prétendre inférer une ligne éditoriale."""
+def infer_topics(
+    articles: list[dict[str, Any]],
+    topics: list[str],
+) -> dict[str, list[dict[str, Any]]]:
+    """Classement simple et transparent par mots-clés, sans inférer une ligne éditoriale."""
     keywords = {
         "économie et social": (
-            "budget", "dette", "inflation", "salaire", "emploi", "travail",
-            "pouvoir d'achat", "carburant", "énergie", "grève", "social",
+            "budget",
+            "dette",
+            "inflation",
+            "salaire",
+            "emploi",
+            "travail",
+            "pouvoir d'achat",
+            "carburant",
+            "énergie",
+            "grève",
+            "social",
         ),
         "politique et démocratie": (
-            "présidentielle", "élection", "gouvernement", "parlement", "parti",
-            "macron", "rn", "lfi", "politique", "démocratie",
+            "présidentielle",
+            "élection",
+            "gouvernement",
+            "parlement",
+            "parti",
+            "macron",
+            "rn",
+            "lfi",
+            "politique",
+            "démocratie",
         ),
         "sécurité et justice pénale": (
-            "police", "justice", "procès", "prison", "terrorisme", "sécurité",
-            "crime", "violence", "attentat",
+            "police",
+            "justice",
+            "procès",
+            "prison",
+            "terrorisme",
+            "sécurité",
+            "crime",
+            "violence",
+            "attentat",
         ),
         "monde et Europe": (
-            "ukraine", "russie", "europe", "ue", "israël", "gaza", "iran",
-            "moyen-orient", "international", "otan",
+            "ukraine",
+            "russie",
+            "europe",
+            "ue",
+            "israël",
+            "gaza",
+            "iran",
+            "moyen-orient",
+            "international",
+            "otan",
         ),
         "écologie": (
-            "climat", "écologie", "sécheresse", "canicule", "eau", "pesticide",
-            "biodiversité", "pollution", "environnement",
+            "climat",
+            "écologie",
+            "sécheresse",
+            "canicule",
+            "eau",
+            "pesticide",
+            "biodiversité",
+            "pollution",
+            "environnement",
         ),
         "numérique et IA": (
-            "ia", "intelligence artificielle", "numérique", "réseaux sociaux",
-            "plateforme", "internet", "données", "algorithme",
+            "ia",
+            "intelligence artificielle",
+            "numérique",
+            "réseaux sociaux",
+            "plateforme",
+            "internet",
+            "données",
+            "algorithme",
         ),
         "culture et médias": (
-            "culture", "cinéma", "musique", "livre", "télévision", "média",
-            "journalisme", "radio", "artiste",
+            "culture",
+            "cinéma",
+            "musique",
+            "livre",
+            "télévision",
+            "média",
+            "journalisme",
+            "radio",
+            "artiste",
         ),
     }
 
     grouped = {topic: [] for topic in topics}
+    fallback_topic = "politique et démocratie"
+
+    if fallback_topic not in grouped:
+        grouped[fallback_topic] = []
 
     for article in articles:
         haystack = " ".join(
@@ -379,7 +468,7 @@ def infer_topics(articles: list[dict[str, Any]], topics: list[str]) -> dict[str,
                 matched = True
 
         if not matched:
-            grouped["politique et démocratie"].append(article)
+            grouped[fallback_topic].append(article)
 
     return grouped
 
@@ -401,11 +490,16 @@ def topic_paragraph(topic: str, articles: list[dict[str, Any]]) -> str:
     )
 
 
-def build_tracking_table(cumulative: dict[str, Any], weekly_rows: list[dict[str, Any]]) -> Table:
-    by_slug = {row["slug"]: row for row in weekly_rows}
+def build_tracking_table(
+    cumulative: dict[str, Any],
+    weekly_rows: list[dict[str, Any]],
+) -> Table:
     all_rows = sorted(
         weekly_rows,
-        key=lambda row: (not row["has_article_this_week"], row["name"].lower()),
+        key=lambda row: (
+            media_display_order(row),
+            row["name"].casefold(),
+        ),
     )
 
     data: list[list[Paragraph]] = [
@@ -421,12 +515,21 @@ def build_tracking_table(cumulative: dict[str, Any], weekly_rows: list[dict[str,
     row_backgrounds: list[tuple[int, colors.Color]] = []
 
     for index, row in enumerate(all_rows, start=1):
-        media_total = cumulative.get("media", {}).get(row["slug"], {}).get("total_articles", 0)
+        media_total = cumulative.get("media", {}).get(row["slug"], {}).get(
+            "total_articles",
+            0,
+        )
         found = row["has_article_this_week"]
+
         data.append(
             [
                 paragraph(row["name"], "CellFrench"),
-                paragraph("Indépendant" if row["category"] == "independent" else "Non indépendant", "CellFrench"),
+                paragraph(
+                    "Indépendant"
+                    if row["category"] == "independent"
+                    else "Non indépendant",
+                    "CellFrench",
+                ),
                 paragraph(row["orientation"], "CellFrench"),
                 paragraph(str(media_total), "CellFrench"),
                 paragraph("Oui" if found else "Non", "CellFrench"),
@@ -461,7 +564,11 @@ def footer(canvas: Any, document: Any) -> None:
     canvas.saveState()
     canvas.setFont(FONT, 7.5)
     canvas.setFillColor(GREY)
-    canvas.drawString(15 * mm, 10 * mm, "Synthèse des médias français — rapport hebdomadaire")
+    canvas.drawString(
+        15 * mm,
+        10 * mm,
+        "Synthèse des médias français — rapport hebdomadaire",
+    )
     canvas.drawRightString(195 * mm, 10 * mm, f"Page {document.page}")
     canvas.restoreState()
 
@@ -477,7 +584,10 @@ def main() -> None:
     start, end, weekly_path = resolve_period(args)
     configuration = load_yaml(CONFIG_PATH)
     weekly = load_json(weekly_path, {})
-    cumulative = load_json(DATA_DIR / "cumulative.json", {"media": {}, "history": []})
+    cumulative = load_json(
+        DATA_DIR / "cumulative.json",
+        {"media": {}, "history": []},
+    )
 
     articles = weekly.get("articles", [])
     statuses = weekly.get("media_statuses", {})
@@ -495,18 +605,39 @@ def main() -> None:
                 "name": media["name"],
                 "category": media["category"],
                 "orientation": media["orientation"],
+                "display_order": media_display_order(media),
                 "articles": articles_by_slug.get(slug, []),
                 "status": statuses.get(slug, "not_found"),
                 "has_article_this_week": bool(articles_by_slug.get(slug, [])),
             }
         )
 
-    independent_rows = [row for row in media_rows if row["category"] == "independent"]
-    non_independent_rows = [row for row in media_rows if row["category"] == "non_independent"]
-    left_rows = [row for row in non_independent_rows if orientation_group(row) == "gauche"]
-    right_rows = [row for row in non_independent_rows if orientation_group(row) == "droite"]
+    media_rows.sort(
+        key=lambda row: (
+            media_display_order(row),
+            row["name"].casefold(),
+        )
+    )
 
-    topics = configuration.get("topics", [])
+    independent_rows = [
+        row for row in media_rows
+        if row["category"] == "independent"
+    ]
+    non_independent_rows = [
+        row for row in media_rows
+        if row["category"] == "non_independent"
+    ]
+    left_rows = [
+        row for row in non_independent_rows
+        if orientation_group(row) == "gauche"
+    ]
+    right_rows = [
+        row for row in non_independent_rows
+        if orientation_group(row) == "droite"
+    ]
+
+    configured_topics = configuration.get("topics", [])
+    topics = configured_topics if configured_topics else DEFAULT_TOPICS
     grouped_topics = infer_topics(articles, topics)
 
     OUTPUT_DIR.mkdir(exist_ok=True)
@@ -528,9 +659,13 @@ def main() -> None:
     story.extend(
         [
             paragraph("Synthèse des médias en France", "ReportTitle"),
-            paragraph(f"Semaine {format_date_range(start, end)}", "ReportSubtitle"),
             paragraph(
-                f"Document généré le {datetime.now().strftime('%d/%m/%Y')} à partir des flux et archives configurés.",
+                f"Semaine {format_date_range(start, end)}",
+                "ReportSubtitle",
+            ),
+            paragraph(
+                f"Document généré le {datetime.now().strftime('%d/%m/%Y')} "
+                "à partir des flux et archives configurés.",
                 "BodyFrench",
             ),
             Spacer(1, 8),
@@ -590,7 +725,14 @@ def main() -> None:
 
     for topic in topics:
         story.append(paragraph(topic.capitalize(), "SubsectionTitle"))
-        story.append(paragraph(topic_paragraph(topic, grouped_topics.get(topic, []))))
+        story.append(
+            paragraph(
+                topic_paragraph(
+                    topic,
+                    grouped_topics.get(topic, []),
+                )
+            )
+        )
 
     story.extend(
         [
@@ -604,7 +746,8 @@ def main() -> None:
             Spacer(1, 8),
             paragraph(
                 "Note : La Croix est exclue de la liste conformément à la configuration. "
-                "Les médias sans article RSS vérifié restent recensés afin de rendre visibles les limites de collecte.",
+                "Les médias sans article RSS vérifié restent recensés afin de rendre visibles "
+                "les limites de collecte.",
                 "SmallFrench",
             ),
         ]
