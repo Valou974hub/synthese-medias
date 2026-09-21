@@ -242,7 +242,7 @@ media:
     orientation: "Gauche / centre-gauche, libéral-libertaire"
     display_order: 290
     collection: "rss_or_archive"
-     rss:
+    rss:
       - "https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml"
 
   - name: "L’Obs (Le Nouvel Observateur)"
