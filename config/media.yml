@@ -314,7 +314,7 @@ media:
     display_order: 370
     collection: "rss_or_archive"
     rss:
-      - "https://www.ouest-france.fr/rss-en-continu.xml"
+      - "https://www.ouest-france.fr/rss/une"
 
   - name: "Le Parisien / Aujourd’hui en France"
     slug: "le-parisien"
@@ -323,7 +323,7 @@ media:
     display_order: 380
     collection: "rss_or_archive"
     rss:
-      - "https://feeds.leparisien.fr/leparisien/rss/actualites-en-continu"
+      - "https://feeds.leparisien.fr/leparisien/rss"
 
   - name: "RTL"
     slug: "rtl"
